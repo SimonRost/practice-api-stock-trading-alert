@@ -2,23 +2,17 @@ import os
 import requests
 import time
 from send_telegram_message import send_telegram_message
-# only activate when using local .env file
-# from dotenv import load_dotenv
+from dotenv import load_dotenv
 
 STOCK_NAME = "NVDA"
-NOTICEABLE_DIFFERENCE = 3
+NOTICEABLE_DIFFERENCE = 0.1
 
 STOCK_ENDPOINT = "https://www.alphavantage.co/query"
 NEWS_ENDPOINT = "https://newsapi.org/v2/everything"
 
-# Using github-actions:
+load_dotenv()
 api_alpha = os.getenv("API_ALPHA")
 api_news = os.getenv("API_NEWS")
-
-# Using a local .env file:
-# load_dotenv()
-# api_alpha = os.getenv("API_ALPHA")
-# api_news = os.getenv("API_NEWS")
 
 def get_stockprice():
     params_pricecall = {

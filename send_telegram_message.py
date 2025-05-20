@@ -1,17 +1,11 @@
 import os
 import requests
 import time
-# only activate when using local .env file
-# from dotenv import load_dotenv
+from dotenv import load_dotenv
 
-# Using github-actions:
+load_dotenv()
 BOT_TOKEN = os.getenv("BOT_TOKEN")
 CHAT_ID = os.getenv("CHAT_ID")
-
-# Using a local .env file:
-# load_dotenv()
-# BOT_TOKEN = os.getenv("BOT_TOKEN")
-# CHAT_ID = os.getenv("CHAT_ID")
 
 def send_telegram_message(message: str):
     if not BOT_TOKEN or not CHAT_ID:
