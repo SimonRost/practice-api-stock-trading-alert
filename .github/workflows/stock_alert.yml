@@ -23,8 +23,8 @@ jobs:
 
     - name: Run the bot script
       env:
-        api_alpha: ${{ secrets.API_ALPHA }}
-        api_news: ${{ secrets.API_NEWS }}
+        API_ALPHA: ${{ secrets.API_ALPHA }}
+        API_NEWS: ${{ secrets.API_NEWS }}
         BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
         CHAT_ID: ${{ secrets.CHAT_ID }}
       run: python main.py
