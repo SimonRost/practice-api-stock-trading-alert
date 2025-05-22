@@ -5,7 +5,7 @@ from send_telegram_message import send_telegram_message
 from dotenv import load_dotenv
 
 STOCK_NAME = "NVDA"
-NOTICEABLE_DIFFERENCE = 0.1
+NOTICEABLE_DIFFERENCE = 3
 
 STOCK_ENDPOINT = "https://www.alphavantage.co/query"
 NEWS_ENDPOINT = "https://newsapi.org/v2/everything"
